@@ -1,0 +1,106 @@
+<model>
+    <mount>//OPNsense/chrony/server</mount>
+    <description>Chrony Server configuration</description>
+    <version>0.0.1</version>
+    <items>
+        <type type="Enum">
+            <Default>server</Default>
+            <Required>Y</Required>
+            <Options>
+                <Option>
+                    <Value>server</Value>
+                    <Description>Server</Description>
+                </Option>
+                <Option>
+                    <Value>pool</Value>
+                    <Description>Pool</Description>
+                </Option>
+                <Option>
+                    <Value>peer</Value>
+                    <Description>Peer</Description>
+                </Option>
+            </Options>
+        </type>
+        <hostname type="HostnameField">
+            <Required>Y</Required>
+        </hostname>
+        <burst_mode type="Enum">
+            <Default>none</Default>
+            <Required>Y</Required>
+            <Options>
+                <Option>
+                    <Value>none</Value>
+                    <Description>None</Description>
+                </Option>
+                <Option>
+                    <Value>burst</Value>
+                    <Description>Burst</Description>
+                </Option>
+                <Option>
+                    <Value>iburst</Value>
+                    <Description>iburst</Description>
+                </Option>
+            </Options>
+        </burst_mode>
+        <minpoll type="IntegerField">
+            <Default>6</Default>
+            <Required>N</Required>
+            <Min>-6</Min>
+            <Max>24</Max>
+        </minpoll>
+        <maxpoll type="IntegerField">
+            <Default>10</Default>
+            <Required>N</Required>
+            <Min>-6</Min>
+            <Max>24</Max>
+        </maxpoll>
+        <prefer type="BooleanField">
+            <Default>0</Default>
+            <Required>N</Required>
+        </prefer>
+        <noselect type="BooleanField">
+            <Default>0</Default>
+            <Required>N</Required>
+        </noselect>
+        <trust type="BooleanField">
+            <Default>0</Default>
+            <Required>N</Required>
+        </trust>
+        <require type="BooleanField">
+            <Default>0</Default>
+            <Required>N</Required>
+        </require>
+        <port type="PortField">
+            <Default>123</Default>
+            <Required>N</Required>
+        </port>
+        <version type="IntegerField">
+            <Default>4</Default>
+            <Required>N</Required>
+            <Min>1</Min>
+            <Max>4</Max>
+        </version>
+        <offset type="FloatField">
+            <Default>0.0</Default>
+            <Required>N</Required>
+        </offset>
+        <presend type="IntegerField">
+            <Required>N</Required>
+        </presend>
+        <minsamples type="IntegerField">
+            <Required>N</Required>
+        </minsamples>
+        <maxsamples type="IntegerField">
+            <Required>N</Required>
+        </maxsamples>
+        <filter type="IntegerField">
+            <Required>N</Required>
+        </filter>
+        <minstratum type="IntegerField">
+            <Required>N</Required>
+        </minstratum>
+        <maxsources type="IntegerField">
+            <Required>N</Required>
+        </maxsources>
+    </items>
+</model>
