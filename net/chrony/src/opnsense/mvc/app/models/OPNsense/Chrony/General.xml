@@ -19,15 +19,6 @@
             <Default>0</Default>
             <Required>Y</Required>
         </ntsnocert>
-        <peers type="HostnameField">
-            <Default>0.opnsense.pool.ntp.org</Default>
-            <Required>Y</Required>
-            <FieldSeparator>,</FieldSeparator>
-            <AsList>Y</AsList>
-        </peers>
-        <fallbackpeers type="HostnameField">
-            <Required>N</Required>
-        </fallbackpeers>
         <allowednetworks type="NetworkField">
             <Required>N</Required>
             <FieldSeparator>,</FieldSeparator>
